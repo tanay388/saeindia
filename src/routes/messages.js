@@ -4,6 +4,8 @@ const sql = require(path.join(__dirname,'../database/sql'))
 
 const bodyParser = require('body-parser')
 Router.use(bodyParser.json())
+
+
 // insert a messages
 Router.post('/contact', (req, res) => {
     const { name, description, phone, email, is_student } = req.body
@@ -19,7 +21,21 @@ Router.post('/contact', (req, res) => {
         })
 })
 
-
+// toggle read and unread
+Router.put('/contact/:id', (req, res) => {
+    const { id } = req.params
+    const { case_closed } = req.body
+    sql('UPDATE contact SET case_closed = $1 ,WHERE id=$2 RETURNING *', [
+        case_closed,
+        id,
+    ])
+        .then((result) => {
+            res.status(200).json(result.rows[0])
+        })
+        .catch((err) => {
+            res.status(501).json(err.message)
+        })
+})
 //delete a messages//
 Router.delete('/contact/:id', (req, res) => {
     const { id } = req.params
