@@ -39,7 +39,42 @@ CREATE TABLE IF NOT EXISTS alumni (
     current_job TEXT , 
     phone VARCHAR(10), 
     email VARCHAR(50), 
-    passing_year TEXT NOT NULL 
+    batch TEXT NOT NULL 
     );
 
 
+
+
+CREATE TABLE IF NOT EXISTS members (
+    id SERIAL NOT NULL PRIMARY KEY, 
+    name VARCHAR(50) NOT NULL, 
+    department VARCHAR(100) NOT NULL,
+    batch VARCHAR(4) NOT NULL,
+    current_job TEXT , 
+    phone VARCHAR(10), 
+    email VARCHAR(50), 
+    facebook VARCHAR(50),
+    linkedin VARCHAR(50),
+    twitter VARCHAR(50),
+    instagram VARCHAR(50),
+    );
+
+
+
+CREATE TABLE IF NOT EXISTS post_bearers (
+    id SERIAL NOT NULL PRIMARY KEY, 
+    name VARCHAR(50) NOT NULL, 
+    post VARCHAR(100) NOT NULL,
+    year VARCHAR(4) NOT NULL,
+    );
+
+
+
+CREATE TABLE IF NOT EXISTS induction_round1_2021 (
+    id SERIAL NOT NULL PRIMARY KEY, 
+    name VARCHAR(50) NOT NULL, 
+    phone VARCHAR(10), 
+    email VARCHAR(50), 
+    description TEXT NOT NULL,
+    time TIMESTAMPTZ NOT NULL DEFAULT NOW()
+    );
