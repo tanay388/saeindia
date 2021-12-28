@@ -1,0 +1,55 @@
+{
+    "contact_us": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "name": "VARCHAR(50)",
+        "email": "VARCHAR(50)",
+        "phone": "VARCHAR(10)",
+        "description": "TEXT",
+        "is_student": "BOOL",
+        "time": "TIMESTAMPTZ NOT NULL DEFAULT NOW()"
+    },
+    "alumni": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "name": "VARCHAR(50)",
+        "email": "VARCHAR(50)",
+        "phone": "VARCHAR(10)",
+        "passing_year": "TEXT",
+        "current_job":"TEXT"
+    },
+    "blog": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "title": "TEXT",
+        "content": "TEXT",
+        "author": "VARCHAR(50)",
+        "tags": "TEXT[]",
+        "time": "TIMESTAMPTZ NOT NULL DEFAULT NOW()"
+    },
+    "admins": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "name": "VARCHAR(50)",
+        "email": "VARCHAR(50)",
+        "password": "TEXT",
+        "phone": "VARCHAR(10)",
+        "year": "VARCHAR(4)"
+    },
+    "members": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "name": "VARCHAR(50)",
+        "email": "VARCHAR(50)",
+        "department": "VARCHAR(100)",
+        "phone": "VARCHAR(10)",
+        "year": "VARCHAR(4)",
+        "linkedin": "TEXT",
+        "facebook": "TEXT",
+        "instagram": "TEXT"
+    },
+    "induction_2021": {
+        "id":"  id SERIAL NOT NULL PRIMARY KEY",
+        "name": "VARCHAR(50)",
+        "email": "VARCHAR(50)",
+        "phone": "VARCHAR(10)",
+        "description": "TEXT",
+        "branch": "VARCHAR(100)",
+        "time": "TIMESTAMPTZ NOT NULL DEFAULT NOW()"
+    }
+}

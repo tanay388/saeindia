@@ -1,0 +1,39 @@
+.HeroHome {
+    padding: 60px 10%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    text-align: center;
+}
+
+.background video {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    font-weight: 600;
+    z-index: -1;
+}
+
+.down-arrow {
+    margin-top: 10vh;
+    animation: crescendo 1.5s alternate infinite ease-in;
+}
+
+@keyframes crescendo {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}

@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+    app:
+        build: .
+        restart: on-failure
+        depends_on:
+            - db
+        ports:
+            - '5000:5000'
+        environment:
+            LOCAL_DATABASE_URL: 'postgresql://sae:sae@db:5432/sae_db'
+    db:
+        image: 'postgres'
+        environment:
+            POSTGRES_USER: 'sae'
+            POSTGRES_PASSWORD: 'sae'
+            POSTGRES_DB: 'sae_db'
+        volumes:
+            - './pgdata:/var/lib/postgresql/data'
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://localhost:5432']
+            interval: 5s
+            timeout: 10s
+            retries: 5

@@ -1,0 +1,18 @@
+.wrapper_hero_contact {
+    background: url(./Assets/bajapic1.jpg) rgba(0, 0, 0, 0.5);
+    min-height: 580px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.inner_container {
+    margin: auto auto;
+}
+.wrapper_event_item {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #171820;
+}

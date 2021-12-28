@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+a {
+    text-decoration: none !important;
+}
+.subHeadingTop {
+    text-transform: uppercase;
+    font-size: 32px;
+    color: #df861d;
+    letter-spacing: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.HeadingTop {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-centre {
+    text-align: center;
+}
+
+.section-heading {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+
+.text-block {
+    color: #f5f2ee;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .subHeadingTop {
+        font-size: 18px;
+    }
+
+    .HeadingTop {
+        font-size: 42px;
+    }
+
+    .text-block {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        line-height: 1.3;
+        letter-spacing: 0;
+    }
+}
+
+.IconList {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fb {
+    color: #0d61a9;
+}
+.insta {
+    color: #f50057;
+}
+.linkedin {
+    color: #1ea2e4;
+}
+.youtube {
+    color: #ff1900;
+}
+
+.carousel-inner .item {
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+}
+.full-carousel {
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    height: 90vh !important;
+    background-size: cover !important;
+}
+
+.box {
+    background-color: hsl(0deg 0% 0% / 50%);
+    border-radius: 5px;
+    border: solid 0.5rem #171820;
+}

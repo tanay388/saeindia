@@ -1,0 +1,63 @@
+.AboutUs {
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #171820;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-wrapper {
+    width: 50%;
+    padding-right: 20px;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.text-wrapper p {
+    text-align: justify;
+}
+
+.min-h-60 {
+    min-height: 90vh;
+}
+
+.bg-img-AboutUs {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center centre;
+    background: url(https://firebasestorage.googleapis.com/v0/b/saeindia-bitsindri.appspot.com/o/Assets%2Fcover1.jpg?alt=media&token=3621fc41-ed97-4e50-b6dd-28b930890ee7);
+}
+
+@media only screen and (max-width: 768px) {
+    .text-wrapper {
+        width: 100%;
+        text-align: center;
+        padding-right: 0%;
+    }
+    .min-h-60 {
+        min-height: 60vh;
+    }
+    .bg-img-AboutUs {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center centre;
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/saeindia-bitsindri.appspot.com/o/Assets%2Fcover1.jpg?alt=media&token=3621fc41-ed97-4e50-b6dd-28b930890ee7);
+    }
+    .AboutUs {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

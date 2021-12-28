@@ -1,0 +1,65 @@
+.PostBearers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 10%;
+    text-align: center;
+    padding-right: 10%;
+    background: url(https://images.unsplash.com/photo-1591134106085-8bbdc61a2ab5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=871&q=80)
+        rgba(17, 17, 11, 0.8);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px #000000;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9) !important;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
+.card__image {
+    height: 16rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.card__title {
+    padding: 0.25rem;
+    font-size: 18px;
+    color: #df861d;
+}
+.card__description {
+    padding: 0;
+    color: white;
+}
+.card__btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid #d50000;
+    background: transparent;
+    color: #d50000;
+    border-radius: 0.2rem;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+.card:hover {
+    transform: scale(1.02);
+}
+.card:hover .card__btn {
+    background: #d50000;
+    color: white;
+}
