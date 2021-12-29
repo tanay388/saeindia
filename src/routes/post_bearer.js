@@ -61,3 +61,5 @@ Router.delete('/post_bearer/:id', (req, res) => {
 })
 
 module.exports = Router
+
+  
