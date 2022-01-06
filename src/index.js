@@ -11,12 +11,12 @@ const alumniroute = require(path.join(__dirname, './routes/alumni'))
 const post_bearer = require(path.join(__dirname, './routes/post_bearer'))
 
 app.use(express.static(path.join(__dirname,'../client/build/')))
+    .use(express.json())
+    .use(cors())
     .use('/api', messagesroute)
     .use('/api', blogroute)
     .use('/api', alumniroute)
     .use('/api',post_bearer)
-    .use(express.json())
-    .use(cors())
     .get('*', (req, res) =>
         res
             .status(200)
